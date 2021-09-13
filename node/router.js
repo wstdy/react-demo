@@ -10,19 +10,10 @@ mysqlUtil.query('select * from parent').then((res)=>{
 })
 
 //登录
-router.post("/login",(req,res)=>{
-    let name = req.body.name
-    let password = req.body.password
-    User.findOne({name:name,password:password},(err,result)=>{
-        if(result == null){
-            res.send("no")
-        }else{
-            res.send(result)
-            console.log(result)
-            var str = `管理员:${result.username},登录成功`
-            system(str)
-        }
-    })
+router.get("/login",(req,res)=>{
+    console.log('req', req.params);
+    console.log('req', req.body);
+    res.send({code: 1})
 })
 
 module.exports = router

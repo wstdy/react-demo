@@ -19,6 +19,6 @@ import rootReduces from './reduces/rootReduces';
 
 //applyMiddleware 作用为了引入中间件
 
-const store = createStore(rootReduces,{},applyMiddleware(logger, thunk));
+const store = createStore(rootReduces,{count: 100},applyMiddleware(logger, thunk));
 
 export default store;

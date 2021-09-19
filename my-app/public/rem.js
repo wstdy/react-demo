@@ -8,7 +8,7 @@
         var docEle = document.documentElement,
             w = docEle.clientWidth,
             num = (w > 750 ? 750 : w) / 750;       // **此时的750就是你设计稿的尺寸
-        docEle.style.fontSize = (num * 100).toFixed(1) + 'px';
+        docEle.style.fontSize = (num * 30).toFixed(1) + 'px';
     };
     recalCulate();
     if (!doc.addEventListener) return;

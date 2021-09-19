@@ -539,21 +539,13 @@ module.exports = function (webpackEnv) {
             {
               test: lessRegex,
               exclude: lessModuleRegex,
-              use: getStyleLoaders(
-                {
-                  importLoaders: 3,
-                  sourceMap: isEnvProduction && shouldUseSourceMap
-                },
-                'less-loader'
-              ),
+              use: getStyleLoaders({importLoaders: 3, sourceMap: isEnvProduction && shouldUseSourceMap},'less-loader'),
               sideEffects: true,
             },
             {
               test: lessModuleRegex,
               use: getStyleLoaders(
-                {
-                  importLoaders: 3,
-                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                {importLoaders: 3, sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: {
                     getLocalIdent: getCSSModuleLocalIdent,
                   },

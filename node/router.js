@@ -1,7 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
-
+console.log(1)
 //连接mysql
 const {mysqlUtil} = require('./mysql/index')
 

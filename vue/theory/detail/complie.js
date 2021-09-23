@@ -24,17 +24,42 @@ class Compiler{
         if (value && reg.test(value)) {
             let key = RegExp.$1.trim();
             node.textContent = value.replace(reg, this.vm[key])
+            new Wacther(this.vm, key, (newValue) => {
+                node.textContent = newValue
+            })
         }
     }
     //编译元素节点,处理指令
     compileElement(node) {
-        console.log('node', node)
-        Array.from(node).forEach((attr) => {
+        Array.from(node.attributes).forEach((attr) => {
             //获取属性名字
             let attrName = attr.name;
             if (this.isDirective(attrName)) {
-
+                attrName = attrName.substr(2);
+                let key = attr.value;
+                this.update(node, key , attrName)
             }
+        })
+    }
+    update(node, key , attrName) {
+        let updateFn = this[attrName + 'Updater'];
+        updateFn && updateFn.call(this, node, this.vm[key], key)
+    }
+    //v-text
+    textUpdater(node, value, key) {
+        node.textContent = value;
+        new Wacther(this.vm, key, (newValue) => {
+            node.textContent = newValue
+        })
+    }
+    //v-model
+    modelUpdater(node, value, key) {
+        node.value = value;
+        new Wacther(this.vm, key, (newValue) => {
+            node.value = newValue
+        })
+        node.addEventListener('input', () => {
+            this.vm[key] = node.value
         })
     }
     //判断元素属性是否为指令

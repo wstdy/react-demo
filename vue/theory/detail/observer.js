@@ -33,4 +33,7 @@ class Observer {
             }
         })
     }
+    test() {
+        console.log(1);
+    }
 }

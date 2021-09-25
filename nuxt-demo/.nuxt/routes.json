@@ -1,0 +1,45 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "E:\\\\工具\\\\react-demo\\\\nuxt-demo\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_756ca1c0"
+  },
+  {
+    "path": "/user",
+    "component": "E:\\\\工具\\\\react-demo\\\\nuxt-demo\\\\pages\\\\user.vue",
+    "chunkName": "pages/user",
+    "children": [
+      {
+        "name": "user",
+        "path": "",
+        "component": "E:\\\\工具\\\\react-demo\\\\nuxt-demo\\\\pages\\\\user\\\\index.vue",
+        "chunkName": "pages/user/index",
+        "_name": "_d47c050c"
+      },
+      {
+        "name": "user-list",
+        "path": "list",
+        "component": "E:\\\\工具\\\\react-demo\\\\nuxt-demo\\\\pages\\\\user\\\\list.vue",
+        "chunkName": "pages/user/list",
+        "_name": "_8cc131b4"
+      },
+      {
+        "name": "user-id",
+        "path": ":id",
+        "component": "E:\\\\工具\\\\react-demo\\\\nuxt-demo\\\\pages\\\\user\\\\_id.vue",
+        "chunkName": "pages/user/_id",
+        "_name": "_02c51662"
+      }
+    ],
+    "_name": "_013ffe08"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "E:\\\\工具\\\\react-demo\\\\nuxt-demo\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_35fcec36"
+  }
+]

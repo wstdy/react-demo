@@ -9,9 +9,10 @@ export default class Header extends React.Component{
         }
     }
     render() {
+        console.log('this.prop', this.props)
         return(
             <div className="header">
-                <div>上海</div>
+                <div>{this.props.data}</div>
                 <div>
                     <input type="text" />
                 </div>

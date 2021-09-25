@@ -6,10 +6,16 @@ import { connect } from "react-redux";
 import {login} from './store/actions/rootAction';
 
 class App extends React.Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+            data: '北京'
+        }
+    }
     render() {
         return (
             <div>
-                <Header></Header>
+                <Header data={this.state.data}></Header>
             </div>
         )
     }

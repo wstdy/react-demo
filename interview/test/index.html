@@ -6,60 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box{
-            padding: 0 200px;
-            height: 300px;
+        #i{
+            background: pink;
+            width:20px;
+            height: 20px;
             position: relative;
-        }
-        .box-center{
-            width: 100%;
-            height: 100%;
-        }
-        .box-left{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100%;
-        }
-        .box-right {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 100%;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-    <table style="width: 100%;">
-        <tr style="width:100%;height: 300px;">
-            <td style="width: 200px;"></td>
-            <td></td>
-            <td style="width: 200px;"></td>
-        </tr>
-    </table>
+    <div id="i" class="2"></div>
+    <div id="i"></div>
+    <div id="i"></div>
+    <div id="i"></div>
+    <div id="i"></div>
+    <div id="i"></div>
 </body>
 </html>
 <script>
-    function getMoreStr(str) {
-        let arr = str.split('');
-        let max = {value: [], count: 1};
-        let count = 1;
-        for (let i = 1; i <= arr.length; i++) {
-            if (arr[i] === arr[i - 1]) {
-                count++
-            } else {
-                if (count > max.count) {
-                    max.value = [arr[i - 1]];
-                    max.count = count
-                } else if (count === max.count && !max.value.includes(arr[i - 1])) {
-                    max.value.push(arr[i - 1])
-                }
-                count = 1;
-            }
+let box =  document.querySelectorAll('#i')
+for (var i = 0; i < box.length; i++) {
+    (function a(i) {
+        box[i].onclick = function() {
+            console.log(this === box[i])
         }
-        return max;
-    }
-    console.log(getMoreStr('aaabbaakejsbccwqaacbbb'))
+    })(i)
+}
+
+var x = 10;
+
+function fn() {
+    console.log(x);
+}
+
+function show(f) {
+    var x = 20;
+    (function(){
+        console.log('x', x)
+        f()
+    })()
+}
+
+show(fn)
+
 </script>

@@ -45,7 +45,7 @@ class myPromise{
 }
 
 
-const test = new Promise((resolve, reject) => {
+const test = new myPromise((resolve, reject) => {
     setTimeout(() => {
         resolve(123)
     }, 1000)

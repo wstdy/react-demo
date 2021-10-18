@@ -52,11 +52,13 @@
   5. 事件委托
   6. 动画尽量使用css避免使用js,设置一些属性可以开启硬件加速(transfrom,opacity,filters,will-change)
   7. 减少重绘(repaint)和回流(reflow)
+
     * 浏览器回流必将引起重绘,重绘不一定会引起回流
     * 当页面中的元素样式改变不影响它在文档流中的位置(color,background等).浏览器会将新样式赋予给元素
       并重新绘制它,这个过程称为重绘
     * 当渲染树中部门或全部元素的尺寸,结构或某些属性发生改变时,浏览器重新渲染部分或全部文档的过程称为回流
   8. Vue相关优化
+
     * 引入生产环境的Vue文件
     * 使用单文件组件预编译模板
     * 提取组件的CSS到单独的文件
@@ -114,8 +116,10 @@
    3. Object.prototype.toString.call() (推荐使用)
    4. contructor
    5. Array.isArray() 返回true,false (判断是否为数组)
-  ###
+
+    ###
  # Vue
   ## 生命周期
-   * new Vue() -> 事件和生命周期钩子初始化-> beforeCreate -> 
+   * 见生命周期图
+   * vue每一个组件都是独立的每个组件都有属于它的生命周期,创建-挂载-更新-销毁
    * 优先级顺序: render > template > el

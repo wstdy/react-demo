@@ -118,8 +118,13 @@
    5. Array.isArray() 返回true,false (判断是否为数组)
 
     ###
- # Vue
-  ## 生命周期
-   * 见生命周期图
-   * vue每一个组件都是独立的每个组件都有属于它的生命周期,创建-挂载-更新-销毁
-   * 优先级顺序: render > template > el
+# Vue
+ ## 生命周期
+  * 见生命周期图
+  * vue每一个组件都是独立的每个组件都有属于它的生命周期,创建-挂载-更新-销毁阶段形成了生命周期
+  * 优先级顺序: render > template > el
+ ## 组件间通信
+  1. props/$emit
+  2. $emit/$on
+  3. $parent/$children与ref
+  4. vuex

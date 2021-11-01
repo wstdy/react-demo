@@ -1,9 +1,13 @@
-import React from "react";
+import React, { Component } from 'react';
 
-export default class Mine extends React.Component{
+class Mine extends Component {
     render() {
         return (
-            <div>Mine</div>
-        )
+            <div>
+               Mine 
+            </div>
+        );
     }
 }
+
+export default Mine;

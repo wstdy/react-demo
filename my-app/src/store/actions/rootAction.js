@@ -20,3 +20,5 @@ export const initUser = (value) => {
 }
 
 export const addUser = (value) => ({ type: 'ADD_USER', value})
+
+export const addList = (value) => ({type: 'ADD_LIST', value})

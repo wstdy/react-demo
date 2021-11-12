@@ -125,3 +125,7 @@
   2. $emit/$on
   3. $parent/$children与ref
   4. vuex
+ ## 两种路由模式
+  1. hash模式
+   * 
+  2. history模式

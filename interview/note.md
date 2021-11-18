@@ -129,3 +129,6 @@
   1. hash模式
    * 
   2. history模式
+# React
+  ## 生命周期
+   1. constructor: 完成对React数据初始化接受两个参数props与context,
